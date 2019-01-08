@@ -1,0 +1,6 @@
+module Pods_Trials_Australia {
+  umbrella header "Pods-Trials Australia-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -12,9 +12,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        http://trials-api-dev.ap-southeast-2.elasticbeanstalk.com/api/events
+
+        UIApplication.shared.registerForRemoteNotifications()
     }
 
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let eventsViewController = EventsListViewController()
+        present(eventsViewController, animated: true, completion: nil)
+    }
 
 }
 

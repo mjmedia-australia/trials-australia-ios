@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0574BA953B5C7BBE64E9C92 /* libPods-Trials Australia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E2D5F2AC64B45DD24C97C5 /* libPods-Trials Australia.a */; };
+		C91E220321E4BFA400ACF665 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E220121E4BFA400ACF665 /* EventsListViewController.swift */; };
+		C91E220421E4BFA400ACF665 /* EventsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91E220221E4BFA400ACF665 /* EventsListViewController.xib */; };
+		C91E220621E4C00800ACF665 /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E220521E4C00800ACF665 /* EventListTableViewCell.swift */; };
+		C91E220821E4C03900ACF665 /* EventListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91E220721E4C03900ACF665 /* EventListTableViewCell.xib */; };
+		C91E220A21E4C18B00ACF665 /* EventPartialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E220921E4C18B00ACF665 /* EventPartialViewModel.swift */; };
+		C91E220D21E4C25600ACF665 /* EventListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E220C21E4C25600ACF665 /* EventListResponse.swift */; };
+		C969236121B7DB0F00BFD8F6 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969236021B7DB0F00BFD8F6 /* AppController.swift */; };
+		C969236421B7DB1F00BFD8F6 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969236321B7DB1F00BFD8F6 /* NotificationService.swift */; };
+		C969236621B7DD9400BFD8F6 /* UserDefaults+Trials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969236521B7DD9400BFD8F6 /* UserDefaults+Trials.swift */; };
 		C9A57E7E218D6DD00029E033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E7D218D6DD00029E033 /* AppDelegate.swift */; };
 		C9A57E80218D6DD00029E033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E7F218D6DD00029E033 /* ViewController.swift */; };
 		C9A57E83218D6DD00029E033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A57E81218D6DD00029E033 /* Main.storyboard */; };
@@ -15,6 +25,9 @@
 		C9A57E93218D6DD10029E033 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E92218D6DD10029E033 /* AppDelegateTests.swift */; };
 		C9A57E9E218D6DD10029E033 /* Trials_AustraliaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E9D218D6DD10029E033 /* Trials_AustraliaUITests.swift */; };
 		C9A57EAC218D708D0029E033 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57EAB218D708D0029E033 /* AppDelegateTests.swift */; };
+		C9FFA72821E4C7B400CF8E0E /* EventsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FFA72721E4C7B400CF8E0E /* EventsAPI.swift */; };
+		C9FFA72A21E4C7F600CF8E0E /* TrialsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FFA72921E4C7F600CF8E0E /* TrialsError.swift */; };
+		C9FFA72C21E4D23600CF8E0E /* EventsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FFA72B21E4D23600CF8E0E /* EventsStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07AD39CD34B44820875B273B /* Pods-Trials Australia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trials Australia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trials Australia/Pods-Trials Australia.release.xcconfig"; sourceTree = "<group>"; };
+		5D1C4A648B4D1D31502AB78C /* Pods-Trials Australia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trials Australia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trials Australia/Pods-Trials Australia.debug.xcconfig"; sourceTree = "<group>"; };
+		C0E2D5F2AC64B45DD24C97C5 /* libPods-Trials Australia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trials Australia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91E220121E4BFA400ACF665 /* EventsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
+		C91E220221E4BFA400ACF665 /* EventsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsListViewController.xib; sourceTree = "<group>"; };
+		C91E220521E4C00800ACF665 /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
+		C91E220721E4C03900ACF665 /* EventListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListTableViewCell.xib; sourceTree = "<group>"; };
+		C91E220921E4C18B00ACF665 /* EventPartialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPartialViewModel.swift; sourceTree = "<group>"; };
+		C91E220C21E4C25600ACF665 /* EventListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListResponse.swift; sourceTree = "<group>"; };
+		C969235E21B7DAA800BFD8F6 /* Trials Australia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Trials Australia.entitlements"; sourceTree = "<group>"; };
+		C969236021B7DB0F00BFD8F6 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		C969236321B7DB1F00BFD8F6 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		C969236521B7DD9400BFD8F6 /* UserDefaults+Trials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Trials.swift"; sourceTree = "<group>"; };
 		C9A57E7A218D6DD00029E033 /* Trials Australia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trials Australia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A57E7D218D6DD00029E033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9A57E7F218D6DD00029E033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +75,9 @@
 		C9A57E9D218D6DD10029E033 /* Trials_AustraliaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trials_AustraliaUITests.swift; sourceTree = "<group>"; };
 		C9A57E9F218D6DD10029E033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A57EAB218D708D0029E033 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		C9FFA72721E4C7B400CF8E0E /* EventsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPI.swift; sourceTree = "<group>"; };
+		C9FFA72921E4C7F600CF8E0E /* TrialsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialsError.swift; sourceTree = "<group>"; };
+		C9FFA72B21E4D23600CF8E0E /* EventsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0574BA953B5C7BBE64E9C92 /* libPods-Trials Australia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +106,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71D2AC1E7EED9DDE7F66CEAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D1C4A648B4D1D31502AB78C /* Pods-Trials Australia.debug.xcconfig */,
+				07AD39CD34B44820875B273B /* Pods-Trials Australia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		79F3D6A9A63274D524A361BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0E2D5F2AC64B45DD24C97C5 /* libPods-Trials Australia.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C91E21FF21E4BF7F00ACF665 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C91E220021E4BF8700ACF665 /* Events List */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C91E220021E4BF8700ACF665 /* Events List */ = {
+			isa = PBXGroup;
+			children = (
+				C91E220121E4BFA400ACF665 /* EventsListViewController.swift */,
+				C91E220221E4BFA400ACF665 /* EventsListViewController.xib */,
+				C91E220521E4C00800ACF665 /* EventListTableViewCell.swift */,
+				C91E220721E4C03900ACF665 /* EventListTableViewCell.xib */,
+				C91E220921E4C18B00ACF665 /* EventPartialViewModel.swift */,
+				C9FFA72721E4C7B400CF8E0E /* EventsAPI.swift */,
+				C9FFA72B21E4D23600CF8E0E /* EventsStyle.swift */,
+			);
+			path = "Events List";
+			sourceTree = "<group>";
+		};
+		C91E220B21E4C24400ACF665 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C91E220C21E4C25600ACF665 /* EventListResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C969235F21B7DB0600BFD8F6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C969236221B7DB1300BFD8F6 /* Services */,
+				C969236021B7DB0F00BFD8F6 /* AppController.swift */,
+				C969236521B7DD9400BFD8F6 /* UserDefaults+Trials.swift */,
+				C9FFA72921E4C7F600CF8E0E /* TrialsError.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C969236221B7DB1300BFD8F6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C969236321B7DB1F00BFD8F6 /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		C9A57E71218D6DD00029E033 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +179,8 @@
 				C9A57E91218D6DD10029E033 /* Trials AustraliaTests */,
 				C9A57E9C218D6DD10029E033 /* Trials AustraliaUITests */,
 				C9A57E7B218D6DD00029E033 /* Products */,
+				71D2AC1E7EED9DDE7F66CEAC /* Pods */,
+				79F3D6A9A63274D524A361BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +197,10 @@
 		C9A57E7C218D6DD00029E033 /* Trials Australia */ = {
 			isa = PBXGroup;
 			children = (
+				C91E220B21E4C24400ACF665 /* Models */,
+				C91E21FF21E4BF7F00ACF665 /* Scenes */,
+				C969235F21B7DB0600BFD8F6 /* Core */,
+				C969235E21B7DAA800BFD8F6 /* Trials Australia.entitlements */,
 				C9A57E7D218D6DD00029E033 /* AppDelegate.swift */,
 				C9A57E7F218D6DD00029E033 /* ViewController.swift */,
 				C9A57E81218D6DD00029E033 /* Main.storyboard */,
@@ -135,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9A57EA2218D6DD10029E033 /* Build configuration list for PBXNativeTarget "Trials Australia" */;
 			buildPhases = (
+				9EDB249C98BA7602B0BD40CF /* [CP] Check Pods Manifest.lock */,
 				C9A57E76218D6DD00029E033 /* Sources */,
 				C9A57E77218D6DD00029E033 /* Frameworks */,
 				C9A57E78218D6DD00029E033 /* Resources */,
@@ -196,6 +299,11 @@
 				TargetAttributes = {
 					C9A57E79218D6DD00029E033 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					C9A57E8D218D6DD10029E033 = {
 						CreatedOnToolsVersion = 10.1;
@@ -233,8 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A57E88218D6DD10029E033 /* LaunchScreen.storyboard in Resources */,
+				C91E220421E4BFA400ACF665 /* EventsListViewController.xib in Resources */,
 				C9A57E85218D6DD10029E033 /* Assets.xcassets in Resources */,
 				C9A57E83218D6DD00029E033 /* Main.storyboard in Resources */,
+				C91E220821E4C03900ACF665 /* EventListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +364,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9EDB249C98BA7602B0BD40CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trials Australia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9A57E76218D6DD00029E033 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C969236421B7DB1F00BFD8F6 /* NotificationService.swift in Sources */,
+				C91E220A21E4C18B00ACF665 /* EventPartialViewModel.swift in Sources */,
+				C9FFA72C21E4D23600CF8E0E /* EventsStyle.swift in Sources */,
+				C91E220321E4BFA400ACF665 /* EventsListViewController.swift in Sources */,
+				C91E220621E4C00800ACF665 /* EventListTableViewCell.swift in Sources */,
 				C9A57E80218D6DD00029E033 /* ViewController.swift in Sources */,
+				C9FFA72821E4C7B400CF8E0E /* EventsAPI.swift in Sources */,
 				C9A57E7E218D6DD00029E033 /* AppDelegate.swift in Sources */,
+				C9FFA72A21E4C7F600CF8E0E /* TrialsError.swift in Sources */,
+				C969236621B7DD9400BFD8F6 /* UserDefaults+Trials.swift in Sources */,
+				C969236121B7DB0F00BFD8F6 /* AppController.swift in Sources */,
+				C91E220D21E4C25600ACF665 /* EventListResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,16 +579,18 @@
 		};
 		C9A57EA3218D6DD10029E033 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D1C4A648B4D1D31502AB78C /* Pods-Trials Australia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Trials Australia/Trials Australia.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7S6S64AYQ9;
+				DEVELOPMENT_TEAM = Y48LQG59RS;
 				INFOPLIST_FILE = "Trials Australia/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "au.com.trials.ios.Trials-Australia";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.trials.ios.development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,16 +599,18 @@
 		};
 		C9A57EA4218D6DD10029E033 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07AD39CD34B44820875B273B /* Pods-Trials Australia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Trials Australia/Trials Australia.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7S6S64AYQ9;
+				DEVELOPMENT_TEAM = Y48LQG59RS;
 				INFOPLIST_FILE = "Trials Australia/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "au.com.trials.ios.Trials-Australia";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.trials.ios.development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
