@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EventsRoutable: class {
+    func loadEvent(id: String)
+}
+
 class EventsRouter {
 
     var navigationController: UINavigationController?
@@ -36,6 +40,19 @@ class EventsRouter {
     }
 
     func eventsListViewController() -> EventsListViewController {
-        return EventsListViewController()
+        let viewController = EventsListViewController()
+        viewController.router = self
+        return viewController
+    }
+
+    func eventDetailViewController(id: String) -> EventDetailViewController {
+        return EventDetailViewController(eventId: id)
+    }
+}
+
+extension EventsRouter: EventsRoutable {
+    func loadEvent(id: String) {
+        let detail = eventDetailViewController(id: id)
+        navigationController?.pushViewController(detail, animated: true)
     }
 }

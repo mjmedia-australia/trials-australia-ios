@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A0574BA953B5C7BBE64E9C92 /* libPods-Trials Australia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E2D5F2AC64B45DD24C97C5 /* libPods-Trials Australia.a */; };
+		C91AA47721E70D0D007196BE /* EventDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91AA47621E70D0D007196BE /* EventDetailResponse.swift */; };
+		C91AA47921E70E5D007196BE /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91AA47821E70E5D007196BE /* Links.swift */; };
+		C91AA47B21E71614007196BE /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91AA47A21E71614007196BE /* EventDetailViewModel.swift */; };
+		C91AA47D21E719E1007196BE /* GeoPointReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91AA47C21E719E1007196BE /* GeoPointReference.swift */; };
+		C91AA47F21E71BC2007196BE /* EventState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91AA47E21E71BC2007196BE /* EventState.swift */; };
 		C91E220321E4BFA400ACF665 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E220121E4BFA400ACF665 /* EventsListViewController.swift */; };
 		C91E220421E4BFA400ACF665 /* EventsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91E220221E4BFA400ACF665 /* EventsListViewController.xib */; };
 		C91E220621E4C00800ACF665 /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E220521E4C00800ACF665 /* EventListTableViewCell.swift */; };
@@ -28,7 +33,6 @@
 		C970C13D21E6FC9F002D68AA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C970C13C21E6FC9F002D68AA /* MainRouter.swift */; };
 		C9A57E7E218D6DD00029E033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E7D218D6DD00029E033 /* AppDelegate.swift */; };
 		C9A57E80218D6DD00029E033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E7F218D6DD00029E033 /* ViewController.swift */; };
-		C9A57E83218D6DD00029E033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A57E81218D6DD00029E033 /* Main.storyboard */; };
 		C9A57E85218D6DD10029E033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A57E84218D6DD10029E033 /* Assets.xcassets */; };
 		C9A57E88218D6DD10029E033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A57E86218D6DD10029E033 /* LaunchScreen.storyboard */; };
 		C9A57E93218D6DD10029E033 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E92218D6DD10029E033 /* AppDelegateTests.swift */; };
@@ -60,6 +64,11 @@
 		07AD39CD34B44820875B273B /* Pods-Trials Australia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trials Australia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trials Australia/Pods-Trials Australia.release.xcconfig"; sourceTree = "<group>"; };
 		5D1C4A648B4D1D31502AB78C /* Pods-Trials Australia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trials Australia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trials Australia/Pods-Trials Australia.debug.xcconfig"; sourceTree = "<group>"; };
 		C0E2D5F2AC64B45DD24C97C5 /* libPods-Trials Australia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trials Australia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91AA47621E70D0D007196BE /* EventDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailResponse.swift; sourceTree = "<group>"; };
+		C91AA47821E70E5D007196BE /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		C91AA47A21E71614007196BE /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		C91AA47C21E719E1007196BE /* GeoPointReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPointReference.swift; sourceTree = "<group>"; };
+		C91AA47E21E71BC2007196BE /* EventState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventState.swift; sourceTree = "<group>"; };
 		C91E220121E4BFA400ACF665 /* EventsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
 		C91E220221E4BFA400ACF665 /* EventsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsListViewController.xib; sourceTree = "<group>"; };
 		C91E220521E4C00800ACF665 /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
@@ -82,7 +91,6 @@
 		C9A57E7A218D6DD00029E033 /* Trials Australia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trials Australia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A57E7D218D6DD00029E033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9A57E7F218D6DD00029E033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C9A57E82218D6DD00029E033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9A57E84218D6DD10029E033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9A57E87218D6DD10029E033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9A57E89218D6DD10029E033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,6 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				C91E220C21E4C25600ACF665 /* EventListResponse.swift */,
+				C91AA47621E70D0D007196BE /* EventDetailResponse.swift */,
+				C91AA47821E70E5D007196BE /* Links.swift */,
+				C91AA47C21E719E1007196BE /* GeoPointReference.swift */,
+				C91AA47E21E71BC2007196BE /* EventState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +229,7 @@
 			children = (
 				C970C13321E6CF82002D68AA /* EventDetailViewController.swift */,
 				C970C13421E6CF82002D68AA /* EventDetailViewController.xib */,
+				C91AA47A21E71614007196BE /* EventDetailViewModel.swift */,
 			);
 			path = "Event Detail";
 			sourceTree = "<group>";
@@ -263,7 +276,6 @@
 				C969235E21B7DAA800BFD8F6 /* Trials Australia.entitlements */,
 				C9A57E7D218D6DD00029E033 /* AppDelegate.swift */,
 				C9A57E7F218D6DD00029E033 /* ViewController.swift */,
-				C9A57E81218D6DD00029E033 /* Main.storyboard */,
 				C9A57E86218D6DD10029E033 /* LaunchScreen.storyboard */,
 				C9A57E89218D6DD10029E033 /* Info.plist */,
 			);
@@ -402,7 +414,6 @@
 				C9A57E88218D6DD10029E033 /* LaunchScreen.storyboard in Resources */,
 				C91E220421E4BFA400ACF665 /* EventsListViewController.xib in Resources */,
 				C9A57E85218D6DD10029E033 /* Assets.xcassets in Resources */,
-				C9A57E83218D6DD00029E033 /* Main.storyboard in Resources */,
 				C970C12C21E6BBD0002D68AA /* DateView.xib in Resources */,
 				C91E220821E4C03900ACF665 /* EventListTableViewCell.xib in Resources */,
 				C970C13621E6CF82002D68AA /* EventDetailViewController.xib in Resources */,
@@ -459,6 +470,9 @@
 				C970C12A21E6BBC6002D68AA /* DateView.swift in Sources */,
 				C91E220A21E4C18B00ACF665 /* EventPartialViewModel.swift in Sources */,
 				C9FFA72C21E4D23600CF8E0E /* EventsStyle.swift in Sources */,
+				C91AA47921E70E5D007196BE /* Links.swift in Sources */,
+				C91AA47721E70D0D007196BE /* EventDetailResponse.swift in Sources */,
+				C91AA47B21E71614007196BE /* EventDetailViewModel.swift in Sources */,
 				C91E220321E4BFA400ACF665 /* EventsListViewController.swift in Sources */,
 				C91E220621E4C00800ACF665 /* EventListTableViewCell.swift in Sources */,
 				C970C13821E6FACF002D68AA /* EventsRouter.swift in Sources */,
@@ -466,9 +480,11 @@
 				C9A57E80218D6DD00029E033 /* ViewController.swift in Sources */,
 				C9FFA72821E4C7B400CF8E0E /* EventsAPI.swift in Sources */,
 				C970C12E21E6BD02002D68AA /* XibView.swift in Sources */,
+				C91AA47F21E71BC2007196BE /* EventState.swift in Sources */,
 				C970C13B21E6FC05002D68AA /* UIImage+Color.swift in Sources */,
 				C9A57E7E218D6DD00029E033 /* AppDelegate.swift in Sources */,
 				C9FFA72A21E4C7F600CF8E0E /* TrialsError.swift in Sources */,
+				C91AA47D21E719E1007196BE /* GeoPointReference.swift in Sources */,
 				C969236621B7DD9400BFD8F6 /* UserDefaults+Trials.swift in Sources */,
 				C969236121B7DB0F00BFD8F6 /* AppController.swift in Sources */,
 				C970C13521E6CF82002D68AA /* EventDetailViewController.swift in Sources */,
@@ -510,14 +526,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C9A57E81218D6DD00029E033 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9A57E82218D6DD00029E033 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C9A57E86218D6DD10029E033 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -654,6 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y48LQG59RS;
 				INFOPLIST_FILE = "Trials Australia/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,6 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y48LQG59RS;
 				INFOPLIST_FILE = "Trials Australia/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

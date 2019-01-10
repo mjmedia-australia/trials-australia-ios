@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct EventListResponse: Decodable {
+struct EventListResponse: Codable {
     let data: [EventPartial]
     let links: Links
 }
 
-struct EventPartial: Decodable {
+struct EventPartial: Codable {
     let id: Int
     let name: String
     let description: String?
@@ -34,13 +34,4 @@ struct EventPartial: Decodable {
         case eventOrganiserName = "event_organiser_name"
         case links
     }
-}
-
-struct Links: Decodable {
-    let linksSelf: String
-
-    enum CodingKeys: String, CodingKey {
-        case linksSelf = "self"
-    }
-
 }

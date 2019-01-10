@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetailViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetailViewController" customModule="Trials_Australia" customModuleProvider="target">
             <connections>
+                <outlet property="stackView" destination="Pcb-Uc-y2u" id="5PC-fs-DYl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,7 +20,46 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRs-wR-d8W">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-Uc-y2u">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npL-J2-uB6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bYu-4c-37P">
+                                            <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="bYu-4c-37P" firstAttribute="centerX" secondItem="npL-J2-uB6" secondAttribute="centerX" id="TIm-8a-etu"/>
+                                        <constraint firstItem="bYu-4c-37P" firstAttribute="centerY" secondItem="npL-J2-uB6" secondAttribute="centerY" id="VYq-8F-uqh"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Pcb-Uc-y2u" secondAttribute="trailing" id="75D-t6-txv"/>
+                        <constraint firstItem="Pcb-Uc-y2u" firstAttribute="top" secondItem="oRs-wR-d8W" secondAttribute="top" id="JA2-Jg-jlO"/>
+                        <constraint firstItem="Pcb-Uc-y2u" firstAttribute="height" secondItem="oRs-wR-d8W" secondAttribute="height" id="Qt3-op-R0R"/>
+                        <constraint firstItem="Pcb-Uc-y2u" firstAttribute="leading" secondItem="oRs-wR-d8W" secondAttribute="leading" id="fK5-y0-0hO"/>
+                        <constraint firstAttribute="bottom" secondItem="Pcb-Uc-y2u" secondAttribute="bottom" id="nP3-cY-TW3"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oRs-wR-d8W" secondAttribute="trailing" id="jfe-uV-dJp"/>
+                <constraint firstItem="oRs-wR-d8W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oa7-tJ-U0i"/>
+                <constraint firstAttribute="bottom" secondItem="oRs-wR-d8W" secondAttribute="bottom" id="sIe-Nk-q0o"/>
+                <constraint firstItem="oRs-wR-d8W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vu4-hc-6vr"/>
+                <constraint firstItem="Pcb-Uc-y2u" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="zQm-q1-5Ef"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>

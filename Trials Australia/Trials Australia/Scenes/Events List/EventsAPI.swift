@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class EventsAPI {
-    static func get(url: URL, completion: @escaping ((_ data: EventListResponse?, _ error: TrialsError?) -> Void)) {
+    static func getEventsList(url: URL, completion: @escaping ((_ data: EventListResponse?, _ error: TrialsError?) -> Void)) {
         Alamofire.request(url).response { response in
             if nil != response.error {
                 completion(nil, TrialsError.dataError)
@@ -37,4 +37,34 @@ class EventsAPI {
             }
         }
     }
+
+    static func getEventsDetail(url: URL, completion: @escaping ((_ data: EventDetailResponse?, _ error: TrialsError?) -> Void)) {
+        Alamofire.request(url).response { response in
+
+            if nil != response.error {
+                completion(nil, TrialsError.dataError)
+                return
+            }
+
+            guard let httpResponse = response.response, httpResponse.statusCode >= 200, httpResponse.statusCode < 400 else {
+                completion(nil, TrialsError.networkError)
+                return
+            }
+
+            guard let data = response.data else {
+                completion(nil, TrialsError.dataError)
+                return
+            }
+
+            do {
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                let response = try decoder.decode(EventDetailResponse.self, from: data)
+                completion(response, nil)
+            } catch let error {
+                completion(nil, TrialsError.dataError)
+            }
+        }
+    }
+
 }
