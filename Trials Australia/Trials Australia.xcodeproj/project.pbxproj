@@ -17,6 +17,10 @@
 		C969236121B7DB0F00BFD8F6 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969236021B7DB0F00BFD8F6 /* AppController.swift */; };
 		C969236421B7DB1F00BFD8F6 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969236321B7DB1F00BFD8F6 /* NotificationService.swift */; };
 		C969236621B7DD9400BFD8F6 /* UserDefaults+Trials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969236521B7DD9400BFD8F6 /* UserDefaults+Trials.swift */; };
+		C970C12A21E6BBC6002D68AA /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C970C12921E6BBC6002D68AA /* DateView.swift */; };
+		C970C12C21E6BBD0002D68AA /* DateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C970C12B21E6BBD0002D68AA /* DateView.xib */; };
+		C970C12E21E6BD02002D68AA /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C970C12D21E6BD02002D68AA /* XibView.swift */; };
+		C970C13121E6BD37002D68AA /* BaseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C970C13021E6BD37002D68AA /* BaseColor.swift */; };
 		C9A57E7E218D6DD00029E033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E7D218D6DD00029E033 /* AppDelegate.swift */; };
 		C9A57E80218D6DD00029E033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E7F218D6DD00029E033 /* ViewController.swift */; };
 		C9A57E83218D6DD00029E033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A57E81218D6DD00029E033 /* Main.storyboard */; };
@@ -61,6 +65,10 @@
 		C969236021B7DB0F00BFD8F6 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		C969236321B7DB1F00BFD8F6 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		C969236521B7DD9400BFD8F6 /* UserDefaults+Trials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Trials.swift"; sourceTree = "<group>"; };
+		C970C12921E6BBC6002D68AA /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		C970C12B21E6BBD0002D68AA /* DateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateView.xib; sourceTree = "<group>"; };
+		C970C12D21E6BD02002D68AA /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		C970C13021E6BD37002D68AA /* BaseColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColor.swift; sourceTree = "<group>"; };
 		C9A57E7A218D6DD00029E033 /* Trials Australia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trials Australia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A57E7D218D6DD00029E033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9A57E7F218D6DD00029E033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +180,25 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		C970C12821E6BBA4002D68AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C970C12921E6BBC6002D68AA /* DateView.swift */,
+				C970C12B21E6BBD0002D68AA /* DateView.xib */,
+				C970C12D21E6BD02002D68AA /* XibView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C970C12F21E6BD20002D68AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9A57E84218D6DD10029E033 /* Assets.xcassets */,
+				C970C13021E6BD37002D68AA /* BaseColor.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C9A57E71218D6DD00029E033 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +224,8 @@
 		C9A57E7C218D6DD00029E033 /* Trials Australia */ = {
 			isa = PBXGroup;
 			children = (
+				C970C12F21E6BD20002D68AA /* Resources */,
+				C970C12821E6BBA4002D68AA /* Views */,
 				C91E220B21E4C24400ACF665 /* Models */,
 				C91E21FF21E4BF7F00ACF665 /* Scenes */,
 				C969235F21B7DB0600BFD8F6 /* Core */,
@@ -204,7 +233,6 @@
 				C9A57E7D218D6DD00029E033 /* AppDelegate.swift */,
 				C9A57E7F218D6DD00029E033 /* ViewController.swift */,
 				C9A57E81218D6DD00029E033 /* Main.storyboard */,
-				C9A57E84218D6DD10029E033 /* Assets.xcassets */,
 				C9A57E86218D6DD10029E033 /* LaunchScreen.storyboard */,
 				C9A57E89218D6DD10029E033 /* Info.plist */,
 			);
@@ -344,6 +372,7 @@
 				C91E220421E4BFA400ACF665 /* EventsListViewController.xib in Resources */,
 				C9A57E85218D6DD10029E033 /* Assets.xcassets in Resources */,
 				C9A57E83218D6DD00029E033 /* Main.storyboard in Resources */,
+				C970C12C21E6BBD0002D68AA /* DateView.xib in Resources */,
 				C91E220821E4C03900ACF665 /* EventListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,12 +424,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C969236421B7DB1F00BFD8F6 /* NotificationService.swift in Sources */,
+				C970C12A21E6BBC6002D68AA /* DateView.swift in Sources */,
 				C91E220A21E4C18B00ACF665 /* EventPartialViewModel.swift in Sources */,
 				C9FFA72C21E4D23600CF8E0E /* EventsStyle.swift in Sources */,
 				C91E220321E4BFA400ACF665 /* EventsListViewController.swift in Sources */,
 				C91E220621E4C00800ACF665 /* EventListTableViewCell.swift in Sources */,
+				C970C13121E6BD37002D68AA /* BaseColor.swift in Sources */,
 				C9A57E80218D6DD00029E033 /* ViewController.swift in Sources */,
 				C9FFA72821E4C7B400CF8E0E /* EventsAPI.swift in Sources */,
+				C970C12E21E6BD02002D68AA /* XibView.swift in Sources */,
 				C9A57E7E218D6DD00029E033 /* AppDelegate.swift in Sources */,
 				C9FFA72A21E4C7F600CF8E0E /* TrialsError.swift in Sources */,
 				C969236621B7DD9400BFD8F6 /* UserDefaults+Trials.swift in Sources */,

@@ -12,7 +12,7 @@ import Alamofire
 class EventsAPI {
     static func get(url: URL, completion: @escaping ((_ data: EventListResponse?, _ error: TrialsError?) -> Void)) {
         Alamofire.request(url).response { response in
-            if let responseError = response.error {
+            if nil != response.error {
                 completion(nil, TrialsError.dataError)
                 return
             }
@@ -32,7 +32,7 @@ class EventsAPI {
                 decoder.dateDecodingStrategy = .iso8601
                 let response = try decoder.decode(EventListResponse.self, from: data)
                 completion(response, nil)
-            } catch let error {
+            } catch {
                 completion(nil, TrialsError.dataError)
             }
         }

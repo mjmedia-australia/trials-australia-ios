@@ -13,14 +13,14 @@ struct EventsList {
     static var eventNameAttributes: [NSAttributedString.Key: Any] {
         return [
             NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline),
-            NSAttributedString.Key.foregroundColor: UIColor.black
+            NSAttributedString.Key.foregroundColor: BaseColor.black
         ]
     }
 
     static var subtitleAttributes: [NSAttributedString.Key: Any] {
         return [
             NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .subheadline),
-            NSAttributedString.Key.foregroundColor: UIColor.darkText
+            NSAttributedString.Key.foregroundColor: BaseColor.lightGrey
         ]
     }
 

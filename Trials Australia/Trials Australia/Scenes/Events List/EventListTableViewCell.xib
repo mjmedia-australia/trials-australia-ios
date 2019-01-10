@@ -11,28 +11,40 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventListTableViewCell" id="cKk-8j-Jr3" customClass="EventListTableViewCell" customModule="Trials_Australia" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventListTableViewCell" rowHeight="80" id="cKk-8j-Jr3" customClass="EventListTableViewCell" customModule="Trials_Australia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cKk-8j-Jr3" id="NMl-Kp-qin">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yab-Hr-iON" customClass="DateView" customModule="Trials_Australia" customModuleProvider="target">
+                        <rect key="frame" x="16" y="16" width="48" height="48"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="Yk3-5a-z4z"/>
+                            <constraint firstAttribute="height" constant="48" id="sdy-cb-X6V"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhW-rY-tZf">
-                        <rect key="frame" x="16" y="11" width="343" height="22"/>
+                        <rect key="frame" x="80" y="11" width="279" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Yab-Hr-iON" firstAttribute="leading" secondItem="NMl-Kp-qin" secondAttribute="leading" constant="16" id="687-vx-BCf"/>
+                    <constraint firstItem="Yab-Hr-iON" firstAttribute="top" secondItem="NMl-Kp-qin" secondAttribute="top" constant="16" id="DbC-hx-S7T"/>
+                    <constraint firstItem="KhW-rY-tZf" firstAttribute="leading" secondItem="Yab-Hr-iON" secondAttribute="trailing" constant="16" id="HJM-En-i5N"/>
                     <constraint firstItem="KhW-rY-tZf" firstAttribute="top" secondItem="NMl-Kp-qin" secondAttribute="topMargin" id="PLd-Ye-uxE"/>
-                    <constraint firstItem="KhW-rY-tZf" firstAttribute="leading" secondItem="NMl-Kp-qin" secondAttribute="leadingMargin" id="PwC-4r-vbF"/>
                     <constraint firstAttribute="bottomMargin" secondItem="KhW-rY-tZf" secondAttribute="bottom" id="eYX-7U-L8h"/>
+                    <constraint firstAttribute="bottom" secondItem="Yab-Hr-iON" secondAttribute="bottom" constant="16" id="i1K-ul-0b5"/>
                     <constraint firstAttribute="trailingMargin" secondItem="KhW-rY-tZf" secondAttribute="trailing" id="uHk-3h-FG3"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="dateView" destination="Yab-Hr-iON" id="roa-vc-v3l"/>
                 <outlet property="titleLabel" destination="KhW-rY-tZf" id="XXb-zj-s3u"/>
             </connections>
         </tableViewCell>

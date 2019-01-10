@@ -29,6 +29,8 @@ class EventsListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+        navigationItem.title = "All Events"
+
         let nib = UINib(nibName: CellIdentifier.eventList.rawValue, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: CellIdentifier.eventList.rawValue)
     }
@@ -39,8 +41,14 @@ class EventsListViewController: UIViewController {
                 self.viewModels = response.data.map { EventPartialViewModel(event: $0)}
                 self.tableView.reloadData()
             } else {
-                let trialsError = error as! TrialsError
-                let controller = UIAlertController(title: trialsError.errorTitle(), message: trialsError.errorDescription(), preferredStyle: .alert)
+                var title = "Error"
+                var description = "Unknown Error"
+
+                if let trialsError = error {
+                    title = trialsError.errorTitle()
+                    description = trialsError.errorDescription()
+                }
+                let controller = UIAlertController(title: title, message: description, preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .default, handler: nil)
                 controller.addAction(action)
                 self.present(controller, animated: true, completion: nil)
@@ -65,9 +73,8 @@ extension EventsListViewController: UITableViewDataSource {
 
     func eventCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventListTableViewCell", for: indexPath) as! EventListTableViewCell
-        let record: EventPartialViewModel = viewModels[indexPath.row]
-        cell.titleLabel?.attributedText = record.cellAttributedString
-        cell.accessibilityLabel = title
+        let viewModel: EventPartialViewModel = viewModels[indexPath.row]
+        cell.configure(with: viewModel)
         return cell
     }
 

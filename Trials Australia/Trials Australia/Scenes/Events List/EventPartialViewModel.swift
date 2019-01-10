@@ -34,26 +34,28 @@ struct EventPartialViewModel {
         self.eventOrganiserName = event.eventOrganiserName
     }
 
-    var cellAttributedString: NSAttributedString {
+    var nameAndLocationAttributedString: NSAttributedString {
 
         let output = NSMutableAttributedString()
         output.append(NSAttributedString(string: name, attributes: EventsList.eventNameAttributes))
         if let locationName = locationName {
-            output.append(NSAttributedString(string: "\n" + locationName, attributes: EventsList.subtitleAttributes))
+            output.append(NSAttributedString(string: "\n" + locationName + ", " + locationState, attributes: EventsList.subtitleAttributes))
         }
 
-        output.append(NSAttributedString(string: "\n" + dateString, attributes: EventsList.subtitleAttributes))
-        output.append(NSAttributedString(string: "\n" + locationState, attributes: EventsList.subtitleAttributes))
         return output
     }
 
+    var isMultiday: Bool {
+        return startDate != endDate
+    }
+
     var dateString: String {
-        if startDate == endDate {
-            return DateFormatter.eventCellDateFormatter.string(from: startDate)
-        } else {
+        if isMultiday {
             let start = DateFormatter.eventCellDateFormatter.string(from: startDate)
             let end = DateFormatter.eventCellDateFormatter.string(from: endDate)
             return "\(start) - \(end)"
+        } else {
+            return DateFormatter.eventCellDateFormatter.string(from: startDate)
         }
     }
 }

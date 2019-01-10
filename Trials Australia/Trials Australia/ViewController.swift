@@ -22,7 +22,8 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         let eventsViewController = EventsListViewController()
-        present(eventsViewController, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: eventsViewController)
+        present(navigationController, animated: true, completion: nil)
     }
 
 }
