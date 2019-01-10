@@ -59,7 +59,10 @@ class EventsListViewController: UIViewController {
 }
 
 extension EventsListViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewModel: EventPartialViewModel = viewModels[indexPath.row]
+        
+    }
 }
 extension EventsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

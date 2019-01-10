@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct EventsList {
+struct EventsStyle {
 
     static var eventNameAttributes: [NSAttributedString.Key: Any] {
         return [
@@ -29,5 +29,17 @@ struct EventsList {
             NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1),
             NSAttributedString.Key.foregroundColor: UIColor.darkText
         ]
+    }
+
+    struct Navigation {
+        static var backgroundColor: UIColor = BaseColor.victorianOrange
+        static var tintColor: UIColor = BaseColor.white
+
+        static var titleAttributes: [NSAttributedString.Key: Any] {
+            return [
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                NSAttributedString.Key.foregroundColor: BaseColor.white
+            ]
+        }
     }
 }

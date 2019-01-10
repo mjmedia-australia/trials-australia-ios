@@ -37,9 +37,9 @@ struct EventPartialViewModel {
     var nameAndLocationAttributedString: NSAttributedString {
 
         let output = NSMutableAttributedString()
-        output.append(NSAttributedString(string: name, attributes: EventsList.eventNameAttributes))
+        output.append(NSAttributedString(string: name, attributes: EventsStyle.eventNameAttributes))
         if let locationName = locationName {
-            output.append(NSAttributedString(string: "\n" + locationName + ", " + locationState, attributes: EventsList.subtitleAttributes))
+            output.append(NSAttributedString(string: "\n" + locationName + ", " + locationState, attributes: EventsStyle.subtitleAttributes))
         }
 
         return output
