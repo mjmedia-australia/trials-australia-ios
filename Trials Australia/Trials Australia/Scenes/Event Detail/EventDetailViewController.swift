@@ -109,8 +109,9 @@ class EventDetailViewController: UIViewController {
     }
 
     @objc func tappedShare(_ sender: Any) {
-        let activityViewController = UIActivityViewController(activityItems: ["This is the text that we will share about our event.", URL(string: "https://trials.com.au/victoria/events/662/glenmaggie-easter-trial-2018-vic")! ], applicationActivities: nil)
-        activityViewController.setValue("\"Glenmaggie 2018\" in the Trials Australia App", forKey: "subject")
+        guard let viewModel = viewModel else { return }
+        let activityViewController = UIActivityViewController(activityItems: [viewModel.name, URL(string: "https://trials.com.au/victoria/events/" + viewModel.id  + "/")! ], applicationActivities: nil)
+        activityViewController.setValue("\"" + viewModel.name + "\" in the Trials Australia App", forKey: "subject")
         activityViewController.completionWithItemsHandler = { activity, success, items, error in
             if success, let anActivity = activity {
                 print("\(anActivity.rawValue)")
