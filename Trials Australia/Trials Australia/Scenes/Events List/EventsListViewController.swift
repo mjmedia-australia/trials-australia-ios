@@ -27,6 +27,12 @@ class EventsListViewController: UIViewController {
         loadRecords()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        tableView.indexPathsForSelectedRows?.compactMap { $0 }.forEach { tableView.cellForRow(at: $0)?.setSelected(false, animated: true) }
+    }
+
     func setupUI() {
         tableView.delegate = self
         tableView.dataSource = self

@@ -38,6 +38,11 @@
 		C9A57E93218D6DD10029E033 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E92218D6DD10029E033 /* AppDelegateTests.swift */; };
 		C9A57E9E218D6DD10029E033 /* Trials_AustraliaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57E9D218D6DD10029E033 /* Trials_AustraliaUITests.swift */; };
 		C9A57EAC218D708D0029E033 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A57EAB218D708D0029E033 /* AppDelegateTests.swift */; };
+		C9E413F521E7555A00C52D2B /* EventDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E413F421E7555A00C52D2B /* EventDetailHeaderView.swift */; };
+		C9E413F721E755A700C52D2B /* EventDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E413F621E755A700C52D2B /* EventDetailHeaderView.xib */; };
+		C9E413F921E76E7F00C52D2B /* EventDetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E413F821E76E7F00C52D2B /* EventDetailDescriptionView.swift */; };
+		C9E413FB21E76F3E00C52D2B /* EventDetailDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E413FA21E76F3E00C52D2B /* EventDetailDescriptionView.xib */; };
+		C9E413FD21E7764300C52D2B /* ViewportMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E413FC21E7764300C52D2B /* ViewportMetrics.swift */; };
 		C9FFA72821E4C7B400CF8E0E /* EventsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FFA72721E4C7B400CF8E0E /* EventsAPI.swift */; };
 		C9FFA72A21E4C7F600CF8E0E /* TrialsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FFA72921E4C7F600CF8E0E /* TrialsError.swift */; };
 		C9FFA72C21E4D23600CF8E0E /* EventsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FFA72B21E4D23600CF8E0E /* EventsStyle.swift */; };
@@ -101,6 +106,11 @@
 		C9A57E9D218D6DD10029E033 /* Trials_AustraliaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trials_AustraliaUITests.swift; sourceTree = "<group>"; };
 		C9A57E9F218D6DD10029E033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A57EAB218D708D0029E033 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		C9E413F421E7555A00C52D2B /* EventDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailHeaderView.swift; sourceTree = "<group>"; };
+		C9E413F621E755A700C52D2B /* EventDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailHeaderView.xib; sourceTree = "<group>"; };
+		C9E413F821E76E7F00C52D2B /* EventDetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailDescriptionView.swift; sourceTree = "<group>"; };
+		C9E413FA21E76F3E00C52D2B /* EventDetailDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailDescriptionView.xib; sourceTree = "<group>"; };
+		C9E413FC21E7764300C52D2B /* ViewportMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewportMetrics.swift; sourceTree = "<group>"; };
 		C9FFA72721E4C7B400CF8E0E /* EventsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPI.swift; sourceTree = "<group>"; };
 		C9FFA72921E4C7F600CF8E0E /* TrialsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialsError.swift; sourceTree = "<group>"; };
 		C9FFA72B21E4D23600CF8E0E /* EventsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStyle.swift; sourceTree = "<group>"; };
@@ -193,6 +203,7 @@
 				C969236021B7DB0F00BFD8F6 /* AppController.swift */,
 				C969236521B7DD9400BFD8F6 /* UserDefaults+Trials.swift */,
 				C9FFA72921E4C7F600CF8E0E /* TrialsError.swift */,
+				C9E413FC21E7764300C52D2B /* ViewportMetrics.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -230,6 +241,10 @@
 				C970C13321E6CF82002D68AA /* EventDetailViewController.swift */,
 				C970C13421E6CF82002D68AA /* EventDetailViewController.xib */,
 				C91AA47A21E71614007196BE /* EventDetailViewModel.swift */,
+				C9E413F421E7555A00C52D2B /* EventDetailHeaderView.swift */,
+				C9E413F621E755A700C52D2B /* EventDetailHeaderView.xib */,
+				C9E413F821E76E7F00C52D2B /* EventDetailDescriptionView.swift */,
+				C9E413FA21E76F3E00C52D2B /* EventDetailDescriptionView.xib */,
 			);
 			path = "Event Detail";
 			sourceTree = "<group>";
@@ -414,9 +429,11 @@
 				C9A57E88218D6DD10029E033 /* LaunchScreen.storyboard in Resources */,
 				C91E220421E4BFA400ACF665 /* EventsListViewController.xib in Resources */,
 				C9A57E85218D6DD10029E033 /* Assets.xcassets in Resources */,
+				C9E413FB21E76F3E00C52D2B /* EventDetailDescriptionView.xib in Resources */,
 				C970C12C21E6BBD0002D68AA /* DateView.xib in Resources */,
 				C91E220821E4C03900ACF665 /* EventListTableViewCell.xib in Resources */,
 				C970C13621E6CF82002D68AA /* EventDetailViewController.xib in Resources */,
+				C9E413F721E755A700C52D2B /* EventDetailHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +485,7 @@
 			files = (
 				C969236421B7DB1F00BFD8F6 /* NotificationService.swift in Sources */,
 				C970C12A21E6BBC6002D68AA /* DateView.swift in Sources */,
+				C9E413F521E7555A00C52D2B /* EventDetailHeaderView.swift in Sources */,
 				C91E220A21E4C18B00ACF665 /* EventPartialViewModel.swift in Sources */,
 				C9FFA72C21E4D23600CF8E0E /* EventsStyle.swift in Sources */,
 				C91AA47921E70E5D007196BE /* Links.swift in Sources */,
@@ -485,8 +503,10 @@
 				C9A57E7E218D6DD00029E033 /* AppDelegate.swift in Sources */,
 				C9FFA72A21E4C7F600CF8E0E /* TrialsError.swift in Sources */,
 				C91AA47D21E719E1007196BE /* GeoPointReference.swift in Sources */,
+				C9E413FD21E7764300C52D2B /* ViewportMetrics.swift in Sources */,
 				C969236621B7DD9400BFD8F6 /* UserDefaults+Trials.swift in Sources */,
 				C969236121B7DB0F00BFD8F6 /* AppController.swift in Sources */,
+				C9E413F921E76E7F00C52D2B /* EventDetailDescriptionView.swift in Sources */,
 				C970C13521E6CF82002D68AA /* EventDetailViewController.swift in Sources */,
 				C91E220D21E4C25600ACF665 /* EventListResponse.swift in Sources */,
 				C970C13D21E6FC9F002D68AA /* MainRouter.swift in Sources */,

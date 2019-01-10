@@ -51,7 +51,7 @@ struct EventOrganiser: Codable {
     let name: String
     let slug: String?
     let state: String
-    let clubListDescription: String
+    let clubListDescription: String?
     let eventDescription: String?
     let websiteURL: String?
     let facebookURL: String?

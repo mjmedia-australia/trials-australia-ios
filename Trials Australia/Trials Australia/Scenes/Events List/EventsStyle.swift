@@ -31,6 +31,35 @@ struct EventsStyle {
         ]
     }
 
+    struct Detail {
+
+        static var titleAttributes: [NSAttributedString.Key: Any] {
+            return [
+                NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title1),
+                NSAttributedString.Key.foregroundColor: BaseColor.black
+            ]
+        }
+
+        static var subtitleAttributes: [NSAttributedString.Key: Any] {
+            return [
+                NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body),
+                NSAttributedString.Key.foregroundColor: BaseColor.darkText
+            ]
+        }
+
+        static var bodyAttributes: [NSAttributedString.Key: Any] {
+            return [
+                NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body),
+                NSAttributedString.Key.foregroundColor: BaseColor.black
+            ]
+        }
+
+        struct ImageView {
+            static var backgroundColor: UIColor = BaseColor.lightGrey
+        }
+
+    }
+
     struct Navigation {
         static var backgroundColor: UIColor = BaseColor.victorianOrange
         static var tintColor: UIColor = BaseColor.white

@@ -6,16 +6,18 @@
 //  Copyright © 2019 Matt Langtree. All rights reserved.
 //
 
-import Foundation
+// Used only for HTML conversion to NSAttributedString
+import UIKit
 
 protocol EventDetailViewModelProtocol {
     var id: String { get }
     var name: String { get }
+    var nameAttributed: NSAttributedString { get }
     var state: EventState { get }
-    var dateAttributedText: NSAttributedString { get }
-    var shortLocationName: String { get }
+    var dateAttributed: NSAttributedString { get }
+    var locationAttributed: NSAttributedString { get }
     var imageURL: URL? { get }
-    var description: String? { get }
+    var description: NSAttributedString? { get }
 
     var locationName: String? { get }
     var address: String? { get }
@@ -35,7 +37,6 @@ protocol EventDetailViewModelProtocol {
 
 class EventDetailViewModel: EventDetailViewModelProtocol {
 
-
     var id: String {
         return String(model.id)
     }
@@ -44,16 +45,30 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
         return model.name
     }
 
+    var nameAttributed: NSAttributedString {
+        return NSAttributedString(string: name, attributes: EventsStyle.Detail.titleAttributes)
+    }
+
     var state: EventState {
         return EventState(rawValue: model.location.state) ?? EventState.nonAustralianState
     }
 
-    var dateAttributedText: NSAttributedString {
-        return NSAttributedString(string: "Date goes here...", attributes: nil)
+    var isMultiday: Bool {
+        return model.startDate != model.endDate
     }
 
-    var shortLocationName: String {
-        return model.location.name + ", " + model.location.state
+    var dateAttributed: NSAttributedString {
+        var dateString = EventDetailViewModel.monthFormatter.string(from: model.startDate)
+        if isMultiday {
+            let endDate = EventDetailViewModel.monthFormatter.string(from: model.endDate)
+            dateString.append(contentsOf: " - " + endDate)
+        }
+        return NSAttributedString(string: dateString, attributes: EventsStyle.Detail.subtitleAttributes)
+    }
+
+    var locationAttributed: NSAttributedString {
+        let shortLocation = model.location.name + ", " + model.location.state
+        return NSAttributedString(string: shortLocation, attributes: EventsStyle.Detail.subtitleAttributes)
     }
 
     var imageURL: URL? {
@@ -61,9 +76,7 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
         return URL(string: imageURL)
     }
 
-    var description: String? {
-        return model.description
-    }
+    var description: NSAttributedString?
 
     var locationName: String? {
         return model.location.name
@@ -126,10 +139,39 @@ class EventDetailViewModel: EventDetailViewModelProtocol {
         return model.eventContacts ?? []
     }
 
+    //  Returns date in the format: `Sun, 21 Oct 2019`
+    /// https://gist.github.com/romaonthego/5138532
+    static var monthFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E, d MMM yyyy"
+        return dateFormatter
+    }
+
+
     let model: EventDetail
 
     init(event: EventDetail) {
         self.model = event
+
+        self.description = model.description?.convertHtml()
     }
 
+}
+
+extension String{
+    func convertHtml() -> NSAttributedString? {
+        guard let data = data(using: .utf8) else { return nil }
+        do{
+            let attributedString = try NSMutableAttributedString(data: data, options:
+                [
+                .documentType: NSAttributedString.DocumentType.html,
+                .characterEncoding: String.Encoding.utf8.rawValue
+                ], documentAttributes: nil)
+            attributedString.setAttributes(EventsStyle.Detail.bodyAttributes, range: NSRange(location: 0, length: attributedString.length))
+
+            return attributedString
+        }catch{
+            return nil
+        }
+    }
 }

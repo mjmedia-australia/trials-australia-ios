@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class EventDetailViewController: UIViewController {
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     @IBOutlet weak var stackView: UIStackView!
     private(set) var eventId: String
@@ -27,7 +32,9 @@ class EventDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
 
-        EventsAPI.getEventsDetail(url: URL(string: "https://dev-api.trials.com.au/api/events/807")!) { (response, error) in
+        let eventUrlString = "https://dev-api.trials.com.au/api/events/"+eventId
+//        let eventUrlString = "https://dev-api.trials.com.au/api/events/807"
+        EventsAPI.getEventsDetail(url: URL(string: eventUrlString)!) { (response, error) in
             if let response = response {
                 self.viewModel = EventDetailViewModel(event: response.data)
                 self.updateUI()
@@ -59,8 +66,45 @@ class EventDetailViewController: UIViewController {
 
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
 
+        let headerView = EventDetailHeaderView()
+        headerView.configure(name: viewModel.nameAttributed, date: viewModel.dateAttributed, locationName: viewModel.locationAttributed)
+        stackView.addArrangedSubview(headerView)
+
+        let imageUrl = URL(string: "https://res.cloudinary.com/trials-australia/image/fetch/c_fill,w_800,h_600,g_face/https://trials.com.au/uploads/images/2018/af31ef53-af35-42f8-859f-14cb94bae9a3/IMG_0167.JPG")
+        let imageView = UIImageView(frame: CGRect.zero)
+        imageView.kf.setImage(with: imageUrl)
+        imageView.backgroundColor = EventsStyle.Detail.ImageView.backgroundColor
+        imageView.heightAnchor.constraint(equalToConstant: 281).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: ViewportMetrics.screenWidth).isActive = true
+        stackView.addArrangedSubview(imageView)
+
+
+        if let description = viewModel.description {
+            let descriptionView = EventDetailDescriptionView()
+            descriptionView.configure(attributedText: description)
+            stackView.addArrangedSubview(descriptionView)
+        }
+        let fieldsToAdd: [String?] = [
+            viewModel.id,
+            viewModel.address,
+            viewModel.drivingDirections,
+            viewModel.organiserName,
+            viewModel.organiserDescription,
+            viewModel.organiserWebsite?.absoluteString,
+            viewModel.organiserFacebook?.absoluteString,
+            viewModel.organiserInstagram?.absoluteString,
+            viewModel.organiserYoutube?.absoluteString,
+            viewModel.organiserTwitter?.absoluteString
+        ]
+        fieldsToAdd.compactMap { $0 }.forEach { addToStackView(string: $0) }
+        stackView.addArrangedSubview(UIView())
+    }
+
+    func addToStackView(string: String) {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 320, height: 100))
-        label.text = viewModel.name
+        label.text = string
+        label.sizeToFit()
+        label.numberOfLines = 0
         stackView.addArrangedSubview(label)
     }
 

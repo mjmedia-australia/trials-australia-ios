@@ -37,6 +37,7 @@ class EventsRouter {
         navigationController.navigationBar.tintColor = EventsStyle.Navigation.tintColor
         navigationController.navigationBar.titleTextAttributes = EventsStyle.Navigation.titleAttributes
         navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.barStyle = .blackOpaque
     }
 
     func eventsListViewController() -> EventsListViewController {
